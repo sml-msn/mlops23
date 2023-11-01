@@ -1,0 +1,5 @@
+outs:
+- md5: ff783be2258d02a98acfc0f201ac1d62
+  size: 18628
+  hash: md5
+  path: mob_test.csv
