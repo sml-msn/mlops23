@@ -40,3 +40,15 @@ stages:
     - train.seed
     outs:
     - models/current/model.pkl
+  evaluate:
+    cmd: python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/current/model.pkl
+    deps:
+    - datasets/stage4/test.csv
+    - models/current/model.pkl
+    - scripts/model_learning/evaluate.py
+    params:
+    - train.max_depth
+    - train.seed
+    metrics:
+    - eval/metrics.json:
+        cache: false
